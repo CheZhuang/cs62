@@ -1,3 +1,8 @@
+#ifdef USER_H
+#define USER_H
+
 class User {
     public: User();
 };
+
+#endif
