@@ -1,4 +1,4 @@
-#ifdef USER_H
+#ifndef USER_H
 #define USER_H
 
 class User {
