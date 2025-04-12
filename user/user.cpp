@@ -8,17 +8,11 @@ User::User() {
     friends_= {};
 }
 
-// parameters: id, name, year, zip, friends
-User::User(int i, std::string n, int y, int z, std::set<int> f){
-    id_= i;
-    name_= n;
-    year_= y;
-    zip_= z;
-    friends_= f;
-}
+User::User(int i, std::string n, int y, int z, std::set<int> f)
+: id_(i), name_(n), year_(y), zip_(z), friends_(std::move(f)) {}
 
 void User::addFriend(int id){
-    friends_.insert(id); // set doesn't allow duplicate anyway
+    friends_.insert(id); // avoid duplictaes
 }
 
 void User::deleteFriend(int id){
