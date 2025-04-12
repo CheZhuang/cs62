@@ -11,4 +11,5 @@ int main () {
   
   cout << c1.getX() << endl;
   cout << c2.getS() << endl;
+  cout << "Hello World" << endl;
 }
