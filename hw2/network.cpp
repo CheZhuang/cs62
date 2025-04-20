@@ -115,7 +115,8 @@ User* Network::getUser(int id){
     if (!userExists(id)) return nullptr;
     for (auto user : users_){
         if (user->getId() == id) return user;
-    }   
+    }
+    return nullptr;   
 }
 
 std::vector<int> Network::shortestPath(int from, int to){

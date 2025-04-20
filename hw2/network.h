@@ -56,14 +56,6 @@ public:
     // post: returns true if name exists in the network, false otherwise
     bool userExists(std::string name);
 
-    // prve: id must be in the valid range of existing user IDs
-    // post: returns a pointer to the User with the given id, or nullptr if not found
-    User* getUser(int id);
-
-    // prve: none
-    // post: returns true if a user with the given name exists in the network, false otherwise
-    bool userExists(std::string name);
-
     // prve: none
     // post: returns true if a user with the given ID exists in the network, false otherwise
     bool userExists(int id);
