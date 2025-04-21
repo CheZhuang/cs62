@@ -1,0 +1,21 @@
+1.
+mkdir hw2
+cp hw1/* hw2
+
+2.
+distanceUser can also be solved with DFS by controlling the recursion depth
+
+3.
+Yes. Both will visit all relative nodes from a given starting point.
+
+4.
+Yes, suggestFriends can be solved by comparing all users' friends manually, but very inefficient.
+
+5.
+O(n+m)
+
+6.
+O(n+m)
+
+7.
+≈5h
