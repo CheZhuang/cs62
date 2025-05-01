@@ -32,8 +32,12 @@ class User {
         // post: id is removed from the user's friends_ set if present
         void deleteFriend(int id);
 
+        // prve: p must be a non-null pointer to a valid Post object
+        // post: adds the post to the user's messages_ list
         void addPost(Post* p);
 
+        // prve: howMany must be ≥ 0
+        // post: returns a string of up to 'howMany' most recent posts; only includes public posts if showOnlyPublic is true
         std::string getPostsString(int howMany, bool showOnlyPublic);
     
         // prve: none

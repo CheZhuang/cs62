@@ -309,6 +309,7 @@ int Network::readPosts(char* fname) {
         std::istringstream(line) >> messageId;
 
         std::getline(file, message);
+        message = message.substr(1);
 
         std::getline(file, line);
         std::istringstream(line) >> ownerId;
@@ -317,8 +318,10 @@ int Network::readPosts(char* fname) {
         std::istringstream(line) >> likes;
 
         std::getline(file, visibility);
+        if (visibility != "") visibility = visibility.substr(1);
 
         std::getline(file, author);
+        if (author != "") author = author.substr(1);
 
         if (visibility.empty() && author.empty()) {
             addPost(ownerId, message, likes, false, "", true);

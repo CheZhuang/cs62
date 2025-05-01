@@ -89,9 +89,20 @@ public:
             delete user;
     }
 
+    // prve: ownerId must be a valid user ID
+    // post: creates a Post or IncomingPost based on isIncoming flag, assigns a unique messageId, and adds it to the owner's post list
     void addPost(int ownerId, std::string message, int likes, bool isIncoming, std::string authorName, bool isPublic);
+
+    // prve: ownerId must be a valid user ID; howMany must be ≥ 0
+    // post: returns a string containing up to 'howMany' posts of the user, ordered from most recent; includes only public posts if showOnlyPublic is true
     std::string getPostsString(int ownerId, int howMany, bool showOnlyPublic);
+
+    // prve: fname must be a valid path to a file formatted according to the specification
+    // post: reads posts from the file and adds them to the appropriate users; returns 0 on success, -1 on failure
     int readPosts(char* fname);
+
+    // prve: fname must be a valid writable path
+    // post: writes all posts from all users to the file, sorted by messageId; returns 0 on success, -1 on failure
     int writePosts(char* fname);
 };
 
