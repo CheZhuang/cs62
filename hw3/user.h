@@ -64,4 +64,5 @@ class User {
         // post: returns a reference to the user's messages_ vector
         std::vector<Post*> & getPosts() { return messages_; }
     };
+    
 #endif
